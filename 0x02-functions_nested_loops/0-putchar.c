@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-	char n[8] = {95, 112, 117, 116, 99, 104, 97, 114};
+	char n[8] = "_putchar";
 	int i;
 
 	for (i = 0; i < 8; i++)
