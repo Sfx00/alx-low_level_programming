@@ -1,5 +1,10 @@
 #includ "main.h"
-
+/**
+ * print_alphabet - Prints the lowercase alphabet followed by a newline.
+ *
+ * This function prints all lowercase letters of the English alphabet in order,
+ * followed by a newline character '\n'.
+ */
 void print_alphabet(void)
 {
 	char alp[26] = "abcdefghijklmnopqrstuvwxyz";
@@ -8,12 +13,6 @@ void print_alphabet(void)
 		putchar(alp[i]);
 
 	putchar('\n');
-}
 
-
-int main(void)
-{
-	void print_alphabet;
-
-	return 0;
+	return (0);
 }
