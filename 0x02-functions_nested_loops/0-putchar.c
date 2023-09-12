@@ -1,20 +1,13 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <unistd.h>
 #include <main.h>
 /**
- * main - The main function of the program.
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
  *
- * This function is the entry point of the program. It returns an integer
- * value to indicate the program's exit status.
- *
- * Return: Always 0 (Success)
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-int main(void)
+int _putchar(char c)
 {
-char n[8] = {95, 112, 117, 116, 99, 104, 97, 114};
-for (int i = 0 ; i < 8 ; i++)
-{
-	putchar(n[i]);
-}
-return (0);
+	return (write(1, &c, 1));
 }
