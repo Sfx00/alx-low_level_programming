@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * main - The main function of the program.
  *
@@ -7,13 +8,13 @@
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
 	char n[8] = "_putchar";
-	int i;
 
-	for (i = 0; i < 8; i++)
-		putchar(n[i]);
-	putchar('\n');
+	for (int i = 0; i < 8; i++)
+		_putchar(n[i]);
+	_putchar('\n');
 	return (0);
 }
