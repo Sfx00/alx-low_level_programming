@@ -10,7 +10,7 @@ int main(void)
 {
 	long a = 612852475143, b;
 
-	while (a < (b / 2))
+	while (b < (a / 2))
 	{
 		if ((a % 2) == 0)
 		{
