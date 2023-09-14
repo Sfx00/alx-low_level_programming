@@ -9,23 +9,23 @@
  */
 int main(void)
 {
-	int a;
+	int num;
 
-	for (a = 1; a <= 100; a++)
+	for (num = 1; num <= 100; num++)
 	{
-		if ((a % 3) == 0 && (a % 5) == 0)
+		if ((num % 3) == 0 && (num % 5) == 0)
 			printf("FizzBuzz");
 
-		else if ((a % 3) == 0)
+		else if ((num % 3) == 0)
 			printf("Fizz");
 
-		else if ((a % 5) == 0)
+		else if ((num % 5) == 0)
 			printf("Buzz");
 
 		else
-			printf("%d", a);
+			printf("%d", num);
 
-		if (a == 100)
+		if (num == 100)
 			continue;
 		printf(" ");
 	}
@@ -33,3 +33,4 @@ int main(void)
 	printf("\n");
 
 	return (0);
+}
