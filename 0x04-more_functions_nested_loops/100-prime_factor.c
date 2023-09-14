@@ -18,9 +18,9 @@ int main(void)
 			continue;
 		}
 
-		for (b = 3; div < (a / 2); b += 2)
+		for (b = 3; b < (a / 2); b += 2)
 		{
-			if ((a % div) == 0)
+			if ((a % b) == 0)
 				a /= b;
 		}
 	}
