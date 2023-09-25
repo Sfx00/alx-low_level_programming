@@ -11,20 +11,16 @@
  */
 char *_strchr(char *s, char c)
 {
-		int a = 0;
+	int i;
 
-		while (1)
+	for (i = 0; s[i] >= '\0'; i++)
+	{
+		if (s[i] == c)
 		{
-			
-			if (s[a] == c)
-			{
-				return (s + a);
-			}
-			if (s[a] == '\0')
-			{
-				return (Null);
-			}
-			a++;
+			return (s + i);
 		}
-	        
+	}
+	return ('\0');
+
+
 }
