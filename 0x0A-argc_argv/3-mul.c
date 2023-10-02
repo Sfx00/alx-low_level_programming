@@ -1,17 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - multiplies two numbers.
- * @argc: number of arguments.
- * @argv: array of arguments.
+ * main - Prints the multiplication of two numbers, followed by a new line.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
  *
  * Return: If the program receives two arguments - 0.
  *         If the program does not receive two arguments - 1.
  */
- 
 int main(int argc, char *argv[])
 {
-	int Num1, Num2, Prod;
+	int numb1, numb2, prode;
 
 	if (argc != 3)
 	{
@@ -19,11 +18,11 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	Num1 = atoi(argv[1]);
-	Num2 = atoi(argv[2]);
-	Prod = Num1 * Num2;
+	numb1 = atoi(argv[1]);
+	numb2 = atoi(argv[2]);
+	prode = numb1 * numb2;
 
-	printf("%d\n", Prod);
+	printf("%d\n", prode);
 
 	return (0);
 }
