@@ -1,50 +1,45 @@
+#include <stdlib.h>
 #include "main.h"
 
 /**
-* string_nconcat - concatenates two strings.
-* @str1: first string.
-* @str2: second string.
-* @n: amount of bytes.
-*
-* Return: pointer to the allocated memory.
-* if malloc fails, status value is equal to 98.
-*/
-
-char *string_nconcat(char *str1, char *str2, unsigned int n)
+ * *string_nconcat - concatenates n bytes of a string to another string
+ * @s1: string to append to
+ * @s2: string to concatenate from
+ * @n: number of bytes from s2 to concatenate to s1
+ *
+ * Return: pointer to the resulting string
+ */
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *resu;
+	char *p;
+	unsigned int a = 0, b = 0, Len1 = 0, Len2 = 0;
 
-	unsigned int Len1, Len2, Result_Len, a;
+	while (s1 && s1[Len1])
+		Len1++;
+	while (s2 && s2[Len2])
+		Len2++;
 
-	if (str1 == NULL)
-		str1 = "";
+	if (n < Len2)
+		p = malloc(sizeof(char) * (Len1 + n + 1));
+	else
+		p = malloc(sizeof(char) * (Len1 + Len2 + 1));
 
-	if (str2 == NULL)
-		str2 = "";
-
-	for (Len1 = 0; str1[Len1] != '\0'; Len1++)
-		;
-
-	for (Len2 = 0; str2[Len2] != '\0'; Len2++)
-		;
-
-	if (n > Len2)
-		n = Len2;
-
-	Result_Len = Len1 + n;
-
-	resu = malloc(Result_Len + 1);
-
-	if (resu == NULL)
+	if (!p)
 		return (NULL);
 
-	for (a = 0; a < Result_Len; a++)
-		if (a < Len1)
-			resu[a] = str1[a];
-		else
-			resu[a] = str2[a - Len1];
+	while (a < Len1)
+	{
+		p[a] = s1[a];
+		a++;
+	}
 
-	resu[a] = '\0';
+	while (n < Len2 && a < (Len1 + n))
+		p[a++] = s2[b++];
 
-	return (resu);
+	while (n >= Len2 && a < (Len1 + Len2))
+		p[a++] = s2[b++];
+
+	p[a] = '\0';
+
+	return (p);
 }
