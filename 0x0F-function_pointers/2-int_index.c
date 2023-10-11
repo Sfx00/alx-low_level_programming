@@ -1,4 +1,5 @@
 #include "function_pointers.h"
+
 /**
  * int_index - earches for an integer.
  * @array: array to search in.
@@ -10,18 +11,23 @@
  * or size is negative.
  */
 
+
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int A;
+	int a;
 
 	if (array && cmp)
 	{
-		for (A = 0; A < size; A++)
+
+		for (a = 0; a < size; a++)
 		{
-			if (cmp(array[A]) != 0)
-				return (A);
+			if (cmp(array[a]) != 0)
+				return (a);
+
 		}
 	}
 
+
 	return (-1);
+
 }
