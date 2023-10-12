@@ -3,17 +3,19 @@
 /**
  * print_strings - prints strings.
  * @separator: separator between strings.
- * @n: number of arguments.	
+ * @n: number of arguments.
  */
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int a;
+
 	char *s;
 
 	va_list argv;
 
 	va_start(argv, n);
+
 
 	for (a = 0; a < n; a++)
 	{
